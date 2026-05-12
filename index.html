@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movion — A New Way to Explore Cinema</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="header">
+    <a href="#" class="header__logo">Movion</a>
+
+    <!-- Desktop nav -->
+    <nav class="header__nav header__nav--desktop">
+      <a href="#" class="header__btn header__btn--signup">Sign up</a>
+      <a href="#" class="header__btn header__btn--login">Log in</a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" aria-label="Hero - Gravity">
+
+    <!-- Imagen de fondo: reemplazar src con imagen real -->
+    <img
+      class="hero__bg"
+      src="images/hero-gravity.jpg"
+      alt="Gravity movie backdrop"
+      loading="eager"
+      onerror="this.style.display='none'"
+    />
+
+    <div class="hero__content">
+      <h1 class="hero__headline">
+        A new way to<br>explore cinema.
+      </h1>
+
+      <div class="hero__movie">
+        <!-- Info de película -->
+        <div class="hero__movie-info">
+          <div class="movie-meta">
+            <span class="movie-meta__actors">
+              <span>Sandra Bullock</span>
+              <span>George Clooney</span>
+            </span>
+            <span class="movie-meta__directors">From director Alfonso Cuarón</span>
+          </div>
+          <p class="movie-title">G R A V I T Y</p>
+          <div class="movie-meta">
+            <span class="movie-meta__date">10.4.13</span>
+          </div>
+        </div>
+
+        <!-- Ratings card -->
+        <div class="ratings" role="complementary" aria-label="Movie ratings">
+          <div class="ratings__item">
+            <div class="ratings__source">
+              <span class="ratings__badge ratings__badge--imdb">IMDb</span>
+              <span>IMDb</span>
+            </div>
+            <span class="ratings__score">7.7/10</span>
+          </div>
+          <div class="ratings__item">
+            <div class="ratings__source">
+              <span class="ratings__badge ratings__badge--rt"></span>
+              <span>Rotten Tomatoes</span>
+            </div>
+            <span class="ratings__score">98%</span>
+          </div>
+          <div class="ratings__item">
+            <div class="ratings__source">
+              <span class="ratings__badge ratings__badge--fb">f</span>
+              <span>Facebook</span>
+            </div>
+            <span class="ratings__score">4/5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       TAGLINE (tablet y desktop)
+       ============================================ -->
+  <div class="tagline" aria-hidden="true">
+    <p class="tagline__text">Your movie journey, simplified.</p>
+  </div>
+
+
+  <!-- ============================================
+       APP PREVIEW MOCKUP
+       ============================================ -->
+  <section class="app-preview" aria-label="App preview">
+    <div class="app-preview__container">
+      <div class="app-preview__sidebar">
+
+        <!-- Sidebar de navegación -->
+        <nav class="sidebar" aria-label="App navigation">
+          <span class="sidebar__logo">Movion</span>
+
+          <!-- Search -->
+          <button class="sidebar__icon" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+          </button>
+
+          <!-- Home (active) -->
+          <button class="sidebar__icon sidebar__icon--active" aria-label="Home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </button>
+
+          <!-- History -->
+          <button class="sidebar__icon" aria-label="History">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </button>
+
+          <!-- Discover -->
+          <button class="sidebar__icon" aria-label="Discover">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+          </button>
+
+          <!-- Profile -->
+          <button class="sidebar__icon" aria-label="Profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </button>
+        </nav>
+
+        <!-- Featured content -->
+        <div class="featured">
+          <!-- Imagen de fondo Money Heist: reemplazar src -->
+          <img
+            class="featured__bg"
+            src="images/money-heist-bg.jpg"
+            alt="Money Heist backdrop"
+            onerror="this.style.display='none'"
+          />
+          <div class="featured__overlay"></div>
+
+          <div class="featured__content">
+            <!-- Platform badge (Netflix N) -->
+            <div class="featured__platform">
+              <div class="platform-logo">
+                <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.398 0v.006c3.028 8.556 5.37 15.175 8.348 23.596 2.344.058 4.85.398 4.854.398-2.8-7.924-5.507-15.65-8.4-24zm8.489 0v9.63L18.6 22.951c-.043-7.86-.004-15.913.002-22.95zM5.398 1.05V24c1.873-.277 3.76-.isEnabled463 5.629-.609L5.398 1.05z"/>
+                </svg>
+              </div>
+            </div>
+
+            <h2 class="featured__title">
+              Money <span>Heist</span>
+            </h2>
+
+            <p class="featured__description">
+              A criminal mastermind leads a team of skilled robbers to execute the biggest heist in history while battling law, loyalty, and love.
+            </p>
+
+            <div class="featured__actions">
+              <button class="featured__play">Play</button>
+              <button class="featured__trailer">Watch Trailer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- New This Week -->
+      <div class="new-this-week">
+        <div class="new-this-week__header">
+          <h3 class="new-this-week__title">New This Week</h3>
+          <span class="new-this-week__see-more">See more</span>
+        </div>
+        <div class="new-this-week__grid" role="list">
+          <div class="new-this-week__item" role="listitem">
+            <div class="poster-placeholder poster-placeholder--1"></div>
+          </div>
+          <div class="new-this-week__item" role="listitem">
+            <div class="poster-placeholder poster-placeholder--2"></div>
+          </div>
+          <div class="new-this-week__item" role="listitem">
+            <div class="poster-placeholder poster-placeholder--3"></div>
+          </div>
+          <div class="new-this-week__item" role="listitem">
+            <div class="poster-placeholder poster-placeholder--4"></div>
+          </div>
+          <div class="new-this-week__item" role="listitem">
+            <div class="poster-placeholder poster-placeholder--5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       POSTERS CAROUSEL (fan)
+       ============================================ -->
+  <section class="posters" aria-label="Featured movies">
+    <div class="posters__carousel" role="list">
+      <!-- Cada card: reemplazar el div interno por <img src="..." alt="..."> -->
+      <div class="posters__card" role="listitem" tabindex="0" aria-label="Black Widow">
+        <div class="poster-placeholder poster-placeholder--1"></div>
+      </div>
+      <div class="posters__card" role="listitem" tabindex="0" aria-label="Black Widow 2">
+        <div class="poster-placeholder poster-placeholder--6"></div>
+      </div>
+      <div class="posters__card" role="listitem" tabindex="0" aria-label="Money Heist">
+        <div class="poster-placeholder poster-placeholder--2"></div>
+      </div>
+      <div class="posters__card" role="listitem" tabindex="0" aria-label="John Wick">
+        <div class="poster-placeholder poster-placeholder--3"></div>
+      </div>
+      <div class="posters__card" role="listitem" tabindex="0" aria-label="Spectre">
+        <div class="poster-placeholder poster-placeholder--4"></div>
+      </div>
+      <div class="posters__card" role="listitem" tabindex="0" aria-label="Action">
+        <div class="poster-placeholder poster-placeholder--5"></div>
+      </div>
+      <div class="posters__card" role="listitem" tabindex="0" aria-label="Kings">
+        <div class="poster-placeholder poster-placeholder--7"></div>
+      </div>
+    </div>
+
+    <p class="posters__tagline">Step into a world of<br>endless stories.</p>
+  </section>
+
+
+  <!-- ============================================
+       CTA (tablet / desktop)
+       ============================================ -->
+  <section class="cta" aria-label="Call to action">
+    <p class="cta__text">Join now<br>Get started</p>
+    <a href="#" class="cta__btn">Create Free Account</a>
+  </section>
+
+
+  <!-- ============================================
+       STATS
+       ============================================ -->
+  <section class="stats" aria-label="Platform statistics">
+    <div class="stats__grid">
+      <div class="stats__item">
+        <p class="stats__value">2.3 M</p>
+        <p class="stats__label">Current Users</p>
+      </div>
+      <div class="stats__item">
+        <p class="stats__value">47K</p>
+        <p class="stats__label">Online users</p>
+      </div>
+      <div class="stats__item">
+        <p class="stats__value">836K</p>
+        <p class="stats__label">Pro Users</p>
+      </div>
+      <div class="stats__item">
+        <p class="stats__value">358K</p>
+        <p class="stats__label">New Users</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <span class="footer__logo">Movion</span>
+    <p class="footer__copy">All right reserved</p>
+    <nav class="footer__links" aria-label="Legal">
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+    </nav>
+  </footer>
+
+
+  <!-- ============================================
+       MOBILE BOTTOM NAV
+       ============================================ -->
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <button class="mobile-nav__item mobile-nav__item--active" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      Home
+    </button>
+    <button class="mobile-nav__item" aria-label="Search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      Search
+    </button>
+    <button class="mobile-nav__item" aria-label="Discover">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+      </svg>
+      Discover
+    </button>
+    <button class="mobile-nav__item" aria-label="Profile">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      Profile
+    </button>
+  </nav>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
